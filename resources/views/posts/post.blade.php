@@ -895,9 +895,9 @@ body {
                     </ul>
                     <ul class="social">
                         <li> <a href="#"> <i class=" fa fa-facebook">   </i> </a> </li>
-                        <li> <a href="https://twitter.com/DavidMwambali"> <i class="fa fa-twitter">   </i> </a> </li>
+                        <li> <a href="https://twitter.com/"> <i class="fa fa-twitter">   </i> </a> </li>
                         <li> <a href="https://plus.google.com/"> <i class="fa fa-google-plus">   </i> </a> </li>
-                        <li> <a href="https://www.instagram.com/___davidmwam___/"> <i class="fa fa-instagram">   </i> </a> </li>
+                        <li> <a href="https://www.instagram.com/"> <i class="fa fa-instagram">   </i> </a> </li>
                         <li> <a href="https://www.youtube.com/?hl=fr&gl=FR"> <i class="fa fa-youtube">   </i> </a> </li>
                     </ul>
                 </div>
