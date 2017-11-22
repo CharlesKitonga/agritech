@@ -71,5 +71,37 @@ class pagecontroller extends Controller
     }
 
 
+      public function flower()
+    {
+        return view ('flower.flower');
+
+
+    }
+
+
+      public function beverage()
+
+    {
+        return view ('beverage.beverage');
+
+
+    }
+
+      public function coffee()
+    {
+        return view ('coffee.coffee');
+
+
+    }
+
+
+      public function fruit()
+    {
+        return view ('fruit.fruit');
+
+
+    }
+
+
     
 }

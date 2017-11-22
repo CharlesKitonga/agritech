@@ -38,7 +38,7 @@
     <script>
      function initMap() {
 
-var options ={ zoom:13,
+var options ={ zoom:15,
  center: {lat: -1.3104, lng:  36.8144}
 
 }
@@ -55,20 +55,21 @@ var options ={ zoom:13,
 
 var markers = [
 {coords:{lat: -1.3104, lng:  36.8144},
-      iconImage:' https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png ',
-
-      content:'<h1> agritech/ strathmore </h1>'
+     // iconImage:' https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png ',
+ content:'<p>  <h1> Agritech</h1> <h2> Madaraka, olegankoy line </h2> <p>'
+      //content:'<h1> agritech/ strathmore </h1>'
 
   },
+  /*
 
 {coords: {lat: -1.3211, lng:  36.8147},
-    content:'<p>  <h1> Charles Kitonga ...... Money,</h1> <h2> le baron Kenyan </he> <p>'
+    content:'<p>  <h1> Agritech</h1> <h2> Madaraka, olegankoy line </h2> <p>'
 
   }, 
 
      {coords: {lat: -1.3227, lng:  36.9261}}
 
-
+*/
 
 ];
  // loop through marker 

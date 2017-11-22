@@ -24,3 +24,7 @@ Route::get('/product', 'pagecontroller@product')-> name('product');
 Route::get('/contact', 'pagecontroller@contact')-> name('contact');
 Route::get('/about', 'pagecontroller@about')-> name('about');
 Route::get('/deal', 'pagecontroller@deal')-> name('deal');
+Route::get('/flower', 'pagecontroller@flower')-> name('flower');
+Route::get('/fruit', 'pagecontroller@fruit')-> name('fruit');
+Route::get('/coffee', 'pagecontroller@coffee')-> name('coffee');
+Route::get('/beverage', 'pagecontroller@beverage')-> name('beverage');

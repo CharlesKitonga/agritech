@@ -122,7 +122,7 @@ body {
    
 
     width: 1410px;
-    height: 25px;
+    height: 0px;
     border: 3px;
      left: 80px;
      right: 0px;
@@ -398,8 +398,8 @@ body {
 
 
 <div class="itemcontainer">
-<p  style="color:MediumSeaGreen;"><strong>  we are offering the best deal this end of the year</strong></p>
-<p style="color:MediumSeaGreen;" > celebrate, this moment with the best gifts. </p>
+<p  style="color:MediumSeaGreen;"><strong>....</strong></p>
+<p style="color:MediumSeaGreen;" > .... </p>
 
 <figure class="snip1418"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample85.jpg" alt="sample85"/>
   <div class="add-to-cart"> <i class="ion-android-add"></i><span>Add to Cart</span></div>
@@ -461,7 +461,7 @@ body {
 
 <footer>  
 
-<div class="footer" id="footer">
+<div class="footer" >
         <div class="container">
             <div class="row">
                 <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
@@ -511,11 +511,11 @@ body {
                         </li>
                     </ul>
                     <ul class="social">
-                        <li> <a href="#"> <i class=" fa fa-facebook">   </i> </a> </li>
-                        <li> <a href="#"> <i class="fa fa-twitter">   </i> </a> </li>
-                        <li> <a href="#"> <i class="fa fa-google-plus">   </i> </a> </li>
-                        <li> <a href="#"> <i class="fa fa-pinterest">   </i> </a> </li>
-                        <li> <a href="#"> <i class="fa fa-youtube">   </i> </a> </li>
+                         <li> <a href="#"> <i class=" fa fa-facebook">   </i> </a> </li>
+                        <li> <a href="https://twitter.com/"> <i class="fa fa-twitter">   </i> </a> </li>
+                        <li> <a href=""> <i class="fa fa-google-plus">   </i> </a> </li>
+                        <li> <a href="https://www.instagram.com/charles_kyalo/"> <i class="fa fa-instagram">   </i> </a> </li>
+                        <li> <a href=""> <i class="fa fa-youtube">   </i> </a> </li>
                     </ul>
                 </div>
             </div>

@@ -631,9 +631,115 @@ body {
 
 
 
-  </style>
-</head>
-<body >
+ <!--  start of the slides -->
+
+
+
+
+.navbar {
+  text-align: center;
+  
+  background-color: ;
+      width: 1330px;
+    height: 10px;
+    border: 3px;
+     left: 80px;
+     right: 0px;
+  opacity: 0.6;
+}
+.navbar ul{
+margin: 0;
+padding: 0;
+list-style: none;
+position: relative;
+
+}
+
+.navbar ul li a{
+  display: block;
+  padding: 30px;
+  color: white;
+  text-decoration: none;
+  width: 150px;
+
+
+}
+
+.navbar ul:after {
+  content: ""; clear:both;
+  display: block;
+}
+
+.navbar ul li {
+ float: left;
+ list-style: none;
+
+}
+ .navbar ul ul
+ {
+
+  display: none;
+ }
+
+ .navbar ul  li:hover  ul{
+  display:block;
+ }
+
+ .navbar ul li:hover a{
+
+  transition: 0.9s;
+ }
+ .navbar ul li:hover {
+  color: white;
+ }
+ .navbar ul ul{
+padding: 0;
+margin: 0;
+position: absolute;top: 30px;
+
+ }
+
+ .navbar ul ul li {
+
+  float: :none;
+  position: relative;
+ }
+
+ .navbar ul ul li a {
+
+  padding: 30px;
+  width: 100px;
+  text-align: left;
+ }
+
+.navbar ul ul li a:hover{
+
+  transition: 0.9s;
+  color: black;
+}
+.lo {
+float: right;
+
+}
+
+.last{
+    text-align: center;
+  
+
+      width: 1499px;
+    height: 15px;
+    border: 3px;
+     left: 0px;
+     right: 0px;
+ 
+
+
+  
+
+}
+
+
+</style>
 
 
 
@@ -646,78 +752,53 @@ body {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#">   </a>
+      <a class="navbar-brand" href="#"></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="{{route('product')}}">Products</a></li>
-        <li><a href="{{route('about')}}">About</a></li>
-        <li><a href="{{route('deal')}}">Today's deals</a></li>
+  <div>
+      <ul>
+        
+          <li><a href="{{route('profile')}}">Home</a></li>
+          <li><a href="{{route('product')}}">Products</a>
+
+          <ul>
+        <li><a href="{{route('fruit')}}">Fruits</a></li>
+        <li><a href="{{route('beverage')}}">Beverages</a></li>
+        <li><a href="{{route('flower')}}">Flowers</a></li>
+        <li><a href="{{route('coffee')}}">Coffee</a></li>
+       
+        </ul>
+       
+      
+         </li>
+           <li><a href="{{route('about')}}">About</a></li>
+        <li><a href="{{route('deal')}}">Today's deal</a></li>
         <li><a href="{{route('contact')}}">Contact</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="{{route('login')}}"><span class="glyphicon glyphicon-user"></span>Account </a></li>
+
+
+<div class="lo">
+
+            <li><a href="{{route('login')}}"><span class="glyphicon glyphicon-user"></span>Account </a></li>
         <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+</div>
       </ul>
+            
+      
+
+
+     </div> 
     </div>
   </div>
 </nav>
 
- <!--  start of the slides -->
-
-<div class="container">
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    
-      <!-- Wrapper for slides -->
-      <div class="carousel-inner">
-      
-        <div class="item active">
-          <img src="img/background/fleures.jpg">
-           <div class="carousel-caption">
-            <h3></h3>
-            <p><a href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank" class="label label-danger"></a></p>
-          </div>
-        </div><!-- End Item -->
- 
-         <div class="item">
-          <img src="img/background/fleures3.jpg">
-           <div class="carousel-caption">
-            <h3></h3>
-            <p><a href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank" class="label label-danger"></a></p>
-          </div>
-        </div><!-- End Item -->
-        
-        <div class="item">
-          <img src="img/background/fleures2.jpg">
-           <div class="carousel-caption">
-            <h3></h3>
-            <p> <a href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank" class="label label-danger"></a></p>
-          </div>
-        </div><!-- End Item -->
-        
-        <div class="item">
-          <img src= "img/background/fleures4.jpg">
-           <div class="carousel-caption">
-            <h3></h3>
-            <p></p>
-          </div>
-        </div><!-- End Item -->
-                
-      </div><!-- End Carousel Inner -->
 
 
-      
+
+     
 
 
     </div><!-- End Carousel -->
 </div>
-
-
-
-
-
-
 
 
 <!-- end of the slides -->
@@ -727,54 +808,6 @@ body {
 <div class="itemcontainer">
 
 
-
-
-
-
-
-
-<figure class="snip1369 green">
-  <img src="img/background/showhome4.jpg" alt="pr-sample15" />
-  <div class="image"><img src="img/background/showhome4.jpg" alt="pr-sample15" /></div>
-  <figcaption>
-    <h3>black coffee</h3>
-    <p>.......</p>
-  </figcaption><span class="read-more">
-     
-    shop now <i class="ion-android-arrow-forward"></i></span>
-  <a href="{{route('product')}}"></a>
-</figure>
-<figure class="snip1369 green">
-  <img src="img/background/showhome3.jpg" alt="pr-sample15" />
-  <div class="image"><img src="img/background/showhome3.jpg" alt="pr-sample15" /></div>
-  <figcaption>
-    <h3> wine </h3>
-    <p>.........</p>
-  </figcaption><span class="read-more">
-     
-    shop now <i class="ion-android-arrow-forward"></i></span>
-  <a href="{{route('product')}}"></a>
-</figure>
-<figure class="snip1369 orange"><img src="img/background/showhome2.jpg" alt="pr-sample16" />
-  <div class="image"><img src="img/background/showhome2.jpg" alt="pr-sample16" /></div>
-  <figcaption>
-    <h3>passion fruits</h3>
-    <p> /.......</p>
-  </figcaption><span class="read-more">
-     
-    shop now <i class="ion-android-arrow-forward"></i></span>
-  <a href="{{route('product')}}"></a>
-</figure>
-<figure class="snip1369 orange"><img src="img/background/showhome.jpg" alt="pr-sample16" />
-  <div class="image"><img src="img/background/showhome.jpg" alt="pr-sample16" /></div>
-  <figcaption>
-    <h3>Rose rouge</h3>
-    <p>et toi, la rose, toi la reine, toi qui nous en fais voir de toutes les couleurs et qui nous griffes jusqu'au sang, comme on t'adore.</p>
-  </figcaption><span class="read-more">
-     
-    shop now <i class="ion-android-arrow-forward"></i></span>
-  <a href="{{route('product')}}"></a>  
-</figure>
 
 
 
@@ -907,7 +940,7 @@ body {
                         </li>
                     </ul>
                     <ul class="social">
-                     <li> <a href="#"> <i class=" fa fa-facebook">   </i> </a> </li>
+                       <li> <a href="#"> <i class=" fa fa-facebook">   </i> </a> </li>
                         <li> <a href="https://twitter.com/"> <i class="fa fa-twitter">   </i> </a> </li>
                         <li> <a href=""> <i class="fa fa-google-plus">   </i> </a> </li>
                         <li> <a href="https://www.instagram.com/charles_kyalo/"> <i class="fa fa-instagram">   </i> </a> </li>
