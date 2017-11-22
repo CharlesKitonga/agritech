@@ -17,10 +17,40 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('/logout', 'Auth\LoginController@logout');
+
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/post', 'pagecontroller@post')->name('post');
-Route::get('/profile', 'pagecontroller@profile')->name('profile');
-Route::get('/product', 'pagecontroller@product')-> name('product');
-Route::get('/contact', 'pagecontroller@contact')-> name('contact');
-Route::get('/about', 'pagecontroller@about')-> name('about');
-Route::get('/deal', 'pagecontroller@deal')-> name('deal');
+Route::get('/post', 'PageController@post')->name('post');
+
+Route::get('/profile', 'PageController@profile')->name('profile');
+Route::get('/product', 'PageController@product')-> name('product');
+
+Route::get('/contact', 'PageController@contact')-> name('contact');
+Route::get('/about', 'PageController@about')-> name('about');
+
+Route::get('/deal', 'PageController@deal')-> name('deal');
+Route::get('/users', 'PageController@index')-> name('user');
+
+Route::get('/usersregister', 'PageController@register')-> name('usersregister');
+Route::group(['prefix'=>'admin','middleware'=>'auth'], function (){
+    Route::get('/',function (){
+        return view('admin.index');
+    })->name('admin.index');
+
+    Route::get('/admin', 'UploadController@index');
+
+    Route::get('/Addp', 'AddpController@index')->name('Addp.create');
+    
+	Route::post('/', 'AddpController@post')->name("post_data");
+    
+	Route::get('/public/{path}', 'AddpController@download');
+
+    
+});
+
+
+
+
+
+
+
