@@ -41,7 +41,6 @@ class pagecontroller extends Controller
     {
     	return view ('posts.post');
 
-
     }
 
 

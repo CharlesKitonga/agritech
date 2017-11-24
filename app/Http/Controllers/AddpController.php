@@ -29,6 +29,7 @@ class AddpController extends Controller
             // this get the original extention
             $uploaded_file_ex = $uploaded_file->getClientOriginalExtension();
 
+
             // the path to store the file
             // I add the time at the begining to avoid overwritting the file if another file has the same name.
             $filename = time().'.'.$uploaded_file_ex;
@@ -36,7 +37,7 @@ class AddpController extends Controller
         }
         return Product::create([
             'name'=>$_POST['name'], 'slug'=>$_POST['slug'], 'description'=>$_POST['description'],
-            'price'=>$_POST['price'],'extension'=>$uploaded_file_ex,'path'=>$path]);
+            'price'=>$_POST['price'],'path'=>$path]);
 
         // // Now to store in the database
         // $file = new Files();
