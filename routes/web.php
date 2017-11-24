@@ -45,8 +45,18 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'], function (){
     
 	Route::get('/public/{path}', 'AddpController@download');
 
-    
-});
+    });
+
+ Route::resource('shop', 'ProductController', ['only' => ['index', 'show']]);
+ Route::resource('cart', 'CartController', ['only' => ['index', 'store', 'update', 'destroy']]);
+ //Route::resource('cart', 'CartController');
+
+ Route::delete('emptyCart', 'CartController@emptyCart');
+ Route::post('switchToWishlist/{id}', 'CartController@switchToWishlist');
+ Route::resource('wishlist', 'WishlistController');
+
+ Route::delete('emptyWishlist', 'WishlistController@emptyWishlist');
+ Route::post('switchToCart/{id}', 'WishlistController@switchToCart');
 
 
 
