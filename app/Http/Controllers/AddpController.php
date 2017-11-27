@@ -16,25 +16,49 @@ class AddpController extends Controller
 
     public function post(Request $request){
     	//dd($_POST);die;
-        $path = null;
-        $name = null;
-        $slug = null;
-        $description = null;
-        $price = null;
-        $uploaded_file_ex = null;  
+      $path = null;
+        // $name = null;
+        // $slug = null;
+        // $description = null;
+        // $price = null;
+        // $uploaded_file_ex = null;  
         // check if the request has a file
-        if($request->hasFile('file')){
-            $uploaded_file = $request->file('file');
+      if($request->hasFile('file')){
+            $imageName = $request->file('file');
 
-            // this get the original extention
-            $uploaded_file_ex = $uploaded_file->getClientOriginalExtension();
+    // $products = new Product(array(
+    //   'name' => $request->get('name'),
+    //   'slug'  => $request->get('slug'),
+    //   'description'  => $request->get('description'),
+    //   'price'  => $request->get('price'),
+    //   'path'  => $request->get('path')
+    // ));
+
+    // $products->save();
+
+    $imageName = $products->id . '.' . 
+        $request->file('file')->getClientOriginalExtension();
+
+    $path = $imageName->storeAs('public', $filename);
 
 
-            // the path to store the file
-            // I add the time at the begining to avoid overwritting the file if another file has the same name.
-            $filename = time().'.'.$uploaded_file_ex;
-            $path = $uploaded_file->storeAs('public', $filename);
-        }
+}
+
+    // return \Redirect::route('admin.products.edit', 
+    //     array($product->id))->with('message', 'Product added!');    
+
+    //     if($request->hasFile('file')){
+    //         $uploaded_file = $request->file('file');
+
+    //         // this get the original extention
+    //         $uploaded_file_ex = $uploaded_file->getClientOriginalExtension();
+
+
+    //         // the path to store the file
+    //         // I add the time at the begining to avoid overwritting the file if another file has the same name.
+    //         $filename = time().'.'.$uploaded_file_ex;
+    //         $path = $uploaded_file->storeAs('public', $filename);
+    //     }
         return Product::create([
             'name'=>$_POST['name'], 'slug'=>$_POST['slug'], 'description'=>$_POST['description'],
             'price'=>$_POST['price'],'path'=>$path]);
