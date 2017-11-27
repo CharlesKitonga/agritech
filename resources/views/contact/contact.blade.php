@@ -23,14 +23,7 @@
   color: #080808;
 }
 
-
-
-
-
-
-
-
-    </style>
+  </style>
   </head>
   <body>
     <h3>My Google Maps </h3>

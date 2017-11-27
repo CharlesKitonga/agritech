@@ -614,6 +614,7 @@ body {
   opacity: 0.9;
 }
 
+<<<<<<< HEAD
 
 .last{
     text-align: center;
@@ -629,6 +630,8 @@ body {
 
 
 
+=======
+>>>>>>> master
 
 
   </style>
@@ -657,7 +660,7 @@ body {
         <li><a href="{{route('contact')}}">Contact</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="{{route('login')}}"><span class="glyphicon glyphicon-user"></span>Account </a></li>
+        <li><a href="{{route('user')}}"><span class="glyphicon glyphicon-user"></span>Account </a></li>
         <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
       </ul>
     </div>

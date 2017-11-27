@@ -13,9 +13,6 @@ class pagecontroller extends Controller
 
     }
 
-
-
-
     public function category()
     {
     	return view ('categories.category');
@@ -23,18 +20,13 @@ class pagecontroller extends Controller
 
     }
 
-
-
-
-
-     //
+  //
     public function contact()
     {
     	return view ('contact.contact');
 
 
     }
-
 
 
     public function deal()
@@ -45,14 +37,11 @@ class pagecontroller extends Controller
     }
 
 
-
     public function post()
     {
     	return view ('posts.post');
 
-
     }
-
 
 
      public function product()
@@ -62,7 +51,6 @@ class pagecontroller extends Controller
     }
 
 
-
     public function profile()
     {
     	return view ('profiles.profile');
@@ -70,7 +58,21 @@ class pagecontroller extends Controller
 
     }
 
+     public function index()
+    {
+        return view ('users.user');
 
+
+    }
+     public function register()
+    {
+        return view ('users.usersregister');
+
+
+    }
+
+
+<<<<<<< HEAD
       public function flower()
     {
         return view ('flower.flower');
@@ -104,4 +106,6 @@ class pagecontroller extends Controller
 
 
     
+=======
+>>>>>>> master
 }

@@ -17,7 +17,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('/logout', 'Auth\LoginController@logout');
+
 Route::get('/home', 'HomeController@index')->name('home');
+<<<<<<< HEAD
 Route::get('/post', 'pagecontroller@post')->name('post');
 Route::get('/profile', 'pagecontroller@profile')->name('profile');
 Route::get('/product', 'pagecontroller@product')-> name('product');
@@ -28,3 +31,49 @@ Route::get('/flower', 'pagecontroller@flower')-> name('flower');
 Route::get('/fruit', 'pagecontroller@fruit')-> name('fruit');
 Route::get('/coffee', 'pagecontroller@coffee')-> name('coffee');
 Route::get('/beverage', 'pagecontroller@beverage')-> name('beverage');
+=======
+Route::get('/post', 'PageController@post')->name('post');
+
+Route::get('/profile', 'PageController@profile')->name('profile');
+Route::get('/product', 'PageController@product')-> name('product');
+
+Route::get('/contact', 'PageController@contact')-> name('contact');
+Route::get('/about', 'PageController@about')-> name('about');
+
+Route::get('/deal', 'PageController@deal')-> name('deal');
+Route::get('/users', 'PageController@index')-> name('user');
+
+Route::get('/usersregister', 'PageController@register')-> name('usersregister');
+Route::group(['prefix'=>'admin','middleware'=>'auth'], function (){
+    Route::get('/',function (){
+        return view('admin.index');
+    })->name('admin.index');
+
+    Route::get('/admin', 'UploadController@index');
+
+    Route::get('/Addp', 'AddpController@index')->name('Addp.create');
+    
+	Route::post('/', 'AddpController@post')->name("post_data");
+    
+	Route::get('/public/{path}', 'AddpController@download');
+
+    });
+
+ Route::resource('shop', 'ProductController', ['only' => ['index', 'show']]);
+ Route::resource('cart', 'CartController', ['only' => ['index', 'store', 'update', 'destroy']]);
+ //Route::resource('cart', 'CartController');
+
+ Route::delete('emptyCart', 'CartController@emptyCart');
+ Route::post('switchToWishlist/{id}', 'CartController@switchToWishlist');
+ Route::resource('wishlist', 'WishlistController');
+
+ Route::delete('emptyWishlist', 'WishlistController@emptyWishlist');
+ Route::post('switchToCart/{id}', 'WishlistController@switchToCart');
+
+
+
+
+
+
+
+>>>>>>> master

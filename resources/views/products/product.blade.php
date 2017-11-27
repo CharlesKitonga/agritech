@@ -1,20 +1,14 @@
+@extends('master')
 
- <!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Agritech</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
- 
+@section('content')
 
- <!-- scripte for the slide -->
+    <div class="container">
+        <p><a href="{{ url('/shop') }}">Shop</a> </p>
+        
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="http://cdn.bootcss.com/animate.css/3.5.1/animate.min.css">
+        <hr>
 
+<<<<<<< HEAD
 <script src="function.js"></script>
 </head>
 <body>
@@ -886,10 +880,60 @@ float: right;
 </body>
 
 <div class= "last">
+=======
+        <div class="row">
+            <div class="col-md-4">
+                <img src="{{ asset('img/' . $product->image) }}" alt="product" class="img-responsive">
+            </div>
+>>>>>>> master
+
+            <div class="col-md-8">
+                <h3>${{ $product->price }}</h3>
+                <form action="{{ url('/cart') }}" method="POST" class="side-by-side">
+                    {!! csrf_field() !!}
+                    <input type="hidden" name="id" value="{{ $product->id }}">
+                    <input type="hidden" name="name" value="{{ $product->name }}">
+                    <input type="hidden" name="price" value="{{ $product->price }}">
+                    <input type="submit" class="btn btn-success btn-lg" value="Add to Cart">
+                </form>
+
+                <form action="{{ url('/wishlist') }}" method="POST" class="side-by-side">
+                    {!! csrf_field() !!}
+                    <input type="hidden" name="id" value="{{ $product->id }}">
+                    <input type="hidden" name="name" value="{{ $product->name }}">
+                    <input type="hidden" name="price" value="{{ $product->price }}">
+                    <input type="submit" class="btn btn-primary btn-lg" value="Add to Wishlist">
+                </form>
 
 
-<footer>  
+                <br><br>
 
+                {{ $product->description }}
+            </div> <!-- end col-md-8 -->
+        </div> <!-- end row -->
+
+        <div class="spacer"></div>
+
+        <div class="row">
+            <h3>You may also like...</h3>
+
+            @foreach ($interested as $product)
+                <div class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="caption text-center">
+                            <a href="{{ url('shop', [$product->slug]) }}"><img src="{{ asset('img/flowers' . $product->image) }}" alt="product" class="img-responsive"></a>
+                            <h3>{{ $product->name }}</h3>
+                            <div class="clearfix">
+                            <div class="price pull-left"><p>{{ $product->price }}</p></div>
+                            <a href="{{ url('shop', [$product->slug]) }}" class="btn btn-success pull-right" role="button">add to Cart</a>
+                            </div>
+                        </div> <!-- end caption -->
+
+                    </div> <!-- end thumbnail -->
+                </div> <!-- end col-md-3 -->
+            @endforeach
+
+<<<<<<< HEAD
 <div class="footer" >
         <div class="container">
             <div class="row">
@@ -965,8 +1009,13 @@ float: right;
     </div>
  </footer>
 </div>
+=======
+        </div> <!-- end row -->
+>>>>>>> master
+
+        <div class="spacer"></div>
 
 
+    </div> <!-- end container -->
 
-
-</html>
+@endsection
