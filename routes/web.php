@@ -20,18 +20,6 @@ Auth::routes();
 Route::get('/logout', 'Auth\LoginController@logout');
 
 Route::get('/home', 'HomeController@index')->name('home');
-<<<<<<< HEAD
-Route::get('/post', 'pagecontroller@post')->name('post');
-Route::get('/profile', 'pagecontroller@profile')->name('profile');
-Route::get('/product', 'pagecontroller@product')-> name('product');
-Route::get('/contact', 'pagecontroller@contact')-> name('contact');
-Route::get('/about', 'pagecontroller@about')-> name('about');
-Route::get('/deal', 'pagecontroller@deal')-> name('deal');
-Route::get('/flower', 'pagecontroller@flower')-> name('flower');
-Route::get('/fruit', 'pagecontroller@fruit')-> name('fruit');
-Route::get('/coffee', 'pagecontroller@coffee')-> name('coffee');
-Route::get('/beverage', 'pagecontroller@beverage')-> name('beverage');
-=======
 Route::get('/post', 'PageController@post')->name('post');
 
 Route::get('/profile', 'PageController@profile')->name('profile');
@@ -76,4 +64,3 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'], function (){
 
 
 
->>>>>>> master

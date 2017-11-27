@@ -29,7 +29,7 @@
   <style>
     /* Remove the navbar's default rounded borders and increase the bottom margin */ 
     .navbar {
-      margin-bottom: 0px;
+      margin-bottom: 50px;
       border-radius: 0;
     }
     
@@ -124,6 +124,16 @@ body { padding-top: 20px; }
     border-radius:0px;
 }
 
+.container2{
+
+  width: 1200px;
+  height: 200px;
+  right: 10px;
+  left: 10px;
+
+
+
+}
 
 
 
@@ -138,18 +148,10 @@ body { padding-top: 20px; }
    position: relative;
     width: 1410px;
     height: 709px;
- 
-    
-
-       width: 1499px;
-    
-    
-     left: 0px;
+    border: 3px;
+     left: 25px;
      right: 0px;
 }
-
-
-
 /*logo style*/
 @import url(https://fonts.googleapis.com/css?family=Raleway:500);
 @import url(https://fonts.googleapis.com/css?family=Oswald);
@@ -224,10 +226,10 @@ body {
   position: relative;
   float: left;
   overflow: hidden;
-  margin: 10px 10px;
+  margin: 10px 1%;
   min-width: 230px;
   max-width: 315px;
-  width: 800px;
+  width: 100%;
   background: #20638f;
   text-align: left;
   color: #ffffff;
@@ -378,9 +380,9 @@ body {
    
 
     width: 1410px;
-    height: 0px;
-    border: 0px;
-     left: 0px;
+    height: 25px;
+    border: 3px;
+     left: 80px;
      right: 0px;
 
 }
@@ -512,7 +514,7 @@ body {
   position: relative;
   float: left;
   overflow: hidden;
-  margin: 10px 13px;
+  margin: 18px 18px;
   min-width: 220px;
   max-width: 310px;
   width: 455px;
@@ -614,29 +616,11 @@ body {
   opacity: 0.9;
 }
 
-<<<<<<< HEAD
-
-.last{
-    text-align: center;
-  
-
-      width: 1499px;
-    height: 15px;
-    border: 0px;
-     left: 0px;
-     right: 0px;
-
-}
-
-
-
-=======
->>>>>>> master
 
 
   </style>
 </head>
-<body >
+<body>
 
 
 
@@ -855,12 +839,12 @@ body {
 
 </body>
 
-<div class= "last">
+<div>
 
 
 <footer>  
 
-<div class="footer" >
+<div class="footer" id="footer">
         <div class="container">
             <div class="row">
                 <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
@@ -910,11 +894,11 @@ body {
                         </li>
                     </ul>
                     <ul class="social">
-                     <li> <a href="#"> <i class=" fa fa-facebook">   </i> </a> </li>
-                        <li> <a href="https://twitter.com/"> <i class="fa fa-twitter">   </i> </a> </li>
-                        <li> <a href=""> <i class="fa fa-google-plus">   </i> </a> </li>
-                        <li> <a href="https://www.instagram.com/charles_kyalo/"> <i class="fa fa-instagram">   </i> </a> </li>
-                        <li> <a href=""> <i class="fa fa-youtube">   </i> </a> </li>
+                        <li> <a href="#"> <i class=" fa fa-facebook">   </i> </a> </li>
+                        <li> <a href="https://twitter.com/DavidMwambali"> <i class="fa fa-twitter">   </i> </a> </li>
+                        <li> <a href="https://plus.google.com/"> <i class="fa fa-google-plus">   </i> </a> </li>
+                        <li> <a href="https://www.instagram.com/___davidmwam___/"> <i class="fa fa-instagram">   </i> </a> </li>
+                        <li> <a href="https://www.youtube.com/?hl=fr&gl=FR"> <i class="fa fa-youtube">   </i> </a> </li>
                     </ul>
                 </div>
             </div>
