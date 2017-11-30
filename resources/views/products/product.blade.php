@@ -3,14 +3,12 @@
 @section('content')
 
     <div class="container">
-        <p><a href="{{ url('/shop') }}">Shop</a> </p>
+        <p><a href="{{ url('/shop') }}">Shop</a></p>
         
-
-        <hr>
 
         <div class="row">
             <div class="col-md-4">
-                <img src="{{ asset('img/' . $product->image) }}" alt="product" class="img-responsive">
+                <img src="{{ asset('images/' . $product->image) }}" alt="product" class="img-responsive">
             </div>
 
             <div class="col-md-8">
