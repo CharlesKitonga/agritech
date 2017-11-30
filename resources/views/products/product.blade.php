@@ -3,6 +3,7 @@
 @section('content')
 
     <div class="container">
+<<<<<<< HEAD
         <p><a href="{{ url('/shop') }}">Shop</a> </p>
         
 
@@ -11,6 +12,14 @@
         <div class="row">
             <div class="col-md-4">
                 <img src="{{ asset('img/' . $product->image) }}" alt="product" class="img-responsive">
+=======
+        <p><a href="{{ url('/shop') }}">Shop</a></p>
+        
+
+        <div class="row">
+            <div class="col-md-4">
+                <img src="{{ asset('images/' . $product->image) }}" alt="product" class="img-responsive">
+>>>>>>> master
             </div>
 
             <div class="col-md-8">

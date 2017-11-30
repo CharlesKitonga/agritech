@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 use App\Product;
+use App\Image;
 
 
 class AddpController extends Controller
@@ -15,6 +17,7 @@ class AddpController extends Controller
     }
 
     public function post(Request $request){
+<<<<<<< HEAD
     	//dd($_POST);die;
         $path = null;
         $name = null;
@@ -50,13 +53,27 @@ class AddpController extends Controller
         // $file->save();
 
         // return back();
+=======
+    	
+          $data = $request->all();
+
+          $file = Input::file('file');
+          $imageName = Input::file('file');
+          $imageName = $imageName->getClientOriginalName();
+          $destination = 'images/';
+          $file->move($destination, $imageName);
+
+          $image = new Product;
+          $image->name = $data['name'];
+          $image->slug = $data['slug'];
+          $image->description = $data['description'];
+          $image->price = $data['price'];
+          $image->image = $imageName;
+          $image->save();  
+      }
+>>>>>>> master
 
     }
-
-    // to download
-    public function download($pathToFile){
-        return response()->download(storage_path('app/public/').$pathToFile);
-    }
-
+ 
    
-}
+

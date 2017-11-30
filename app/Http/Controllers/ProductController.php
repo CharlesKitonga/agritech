@@ -25,6 +25,10 @@ class ProductController extends Controller
     {
         $products = Product::where('slug', $slug)->firstOrFail();       
         $interested = Product::where('slug', '!=', $slug)->get()->random(4);
+<<<<<<< HEAD
         return view('products.product')->with(['product' => $products, 'interested' => $interested]);
+=======
+        return view('products.product')->with(['products' => $products, 'interested' => $interested]);
+>>>>>>> master
     }
 }

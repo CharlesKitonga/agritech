@@ -57,6 +57,13 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'], function (){
 
  Route::delete('emptyWishlist', 'WishlistController@emptyWishlist');
  Route::post('switchToCart/{id}', 'WishlistController@switchToCart');
+<<<<<<< HEAD
+=======
+
+Route::get('image-upload','AddpController@imageUpload');
+Route::post('image-upload','AddpController@imageUploadPost');
+
+>>>>>>> master
 
 
 
